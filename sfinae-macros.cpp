@@ -12,7 +12,7 @@ https://ideone.com/5fVNhX
 #define ENABLE_IF(V) typename std::enable_if<V,bool>::type = true
 
 
-template <typename T, ENABLE_IF(IS_SAME(T, int) && IS_ARITHMETIC(T))>
+template <typename T, ENABLE_IF(IS_SAME(T,int) && IS_ARITHMETIC(T))>
 T foo(T input) 
 {
 	return input + 20;
@@ -24,7 +24,7 @@ T foo(T input)
 	return input;
 }
 
-template <typename T, ENABLE_IF(IS_SAME(T, double))>
+template <typename T, ENABLE_IF(IS_SAME(T,double))>
 T foo(T input)
 {
 	return input * 1000;
